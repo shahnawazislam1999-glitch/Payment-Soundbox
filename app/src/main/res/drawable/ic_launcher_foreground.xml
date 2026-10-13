@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- coin -->
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M44,54m-17,0a17,17 0 1,0 34,0a17,17 0 1,0 -34,0" />
+    <!-- rupee sign -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1B5E20"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M38,45 H50 M38,50 H50 M40,45 C50,45 50,57 40,57 L50,66" />
+    <!-- sound waves -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.2"
+        android:strokeLineCap="round"
+        android:pathData="M65,46 A10,10 0 0 1 65,62" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.2"
+        android:strokeLineCap="round"
+        android:pathData="M71,41 A18,18 0 0 1 71,67" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.2"
+        android:strokeLineCap="round"
+        android:pathData="M77,36 A26,26 0 0 1 77,72" />
+</vector>

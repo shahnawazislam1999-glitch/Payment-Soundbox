@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.PaymentSoundbox" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/amber</item>
+    </style>
+</resources>

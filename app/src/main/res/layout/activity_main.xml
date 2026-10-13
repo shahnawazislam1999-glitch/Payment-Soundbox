@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Soundbox"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- ANCHOR: STATUS_TEXT -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Notification access: ..."
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- ANCHOR: ENABLE_BUTTON -->
+        <Button
+            android:id="@+id/btnEnable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Enable notification access" />
+
+        <!-- ANCHOR: TEST_BUTTON -->
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test sound (200 Rs)" />
+
+        <!-- ANCHOR: SETUP_CHECKLIST_UI -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Setup checklist (keep app alive)"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="..."
+            android:textStyle="bold" />
+
+        <include
+            android:id="@+id/rowRestricted"
+            layout="@layout/row_check" />
+
+        <include
+            android:id="@+id/rowAccess"
+            layout="@layout/row_check" />
+
+        <include
+            android:id="@+id/rowNotif"
+            layout="@layout/row_check" />
+
+        <include
+            android:id="@+id/rowBattery"
+            layout="@layout/row_check" />
+
+        <include
+            android:id="@+id/rowAutostart"
+            layout="@layout/row_check" />
+
+        <include
+            android:id="@+id/rowUnused"
+            layout="@layout/row_check" />
+
+        <include
+            android:id="@+id/rowLock"
+            layout="@layout/row_check" />
+
+        <!-- ANCHOR: PAY_APPS_UI (one row per installed payment app is added here by MainActivity) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="8. Payment app notifications"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn ON notifications in PhonePe, GPay, Paytm and other pay apps (not blocked, not silent). Soundbox can only speak what these apps show. Tap Open for each app, enable it, then tick."
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/llPayApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/tvNoPayApps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="No supported payment app found on this phone. Install one, then come back."
+            android:textColor="#C62828"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <!-- ANCHOR: LANGUAGE_SWITCH_UI -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Announcement language"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgLang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English" />
+
+            <RadioButton
+                android:id="@+id/rbHindi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="हिन्दी (Hindi)" />
+        </RadioGroup>
+
+        <!-- ANCHOR: HISTORY_UI -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Last 10 payments"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="No payments yet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</ScrollView>
